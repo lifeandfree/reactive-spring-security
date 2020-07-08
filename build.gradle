@@ -19,8 +19,8 @@ allprojects {
     group 'ru.innopolis'
     version '1.0-SNAPSHOT'
 
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = 1.11
+    targetCompatibility = 1.11
 
 
     repositories {
@@ -45,7 +45,7 @@ allprojects {
 dependencies {
 
     compile(
-            'org.apache.logging.log4j:log4j-core:2.13.0',
+            'org.apache.logging.log4j:log4j-core:2.13.3',
 
             'org.springframework:spring-context:5.0.15.RELEASE',
             'org.springframework:spring-webflux:5.0.15.RELEASE',
@@ -63,7 +63,7 @@ dependencies {
             'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.6',
             'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.6',
 
-            'io.swagger:swagger-annotations:1.5.21',
+            'io.swagger:swagger-annotations:1.5.21'
     )
 }
 

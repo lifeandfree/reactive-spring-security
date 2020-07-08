@@ -95,8 +95,8 @@ public class RegistrationServiceImpl implements RegistrationService {
             organization = new Organization();
             organization.setOrganizationName(organizationName);
 
-            organization.setOrganizationStatus(OrganizationStatus.STATUS_CREATED);
-//            organization.setOrganizationStatus(OrganizationStatus.STATUS_ACTIVED);//TODO нет процедуры активации организации
+//            organization.setOrganizationStatus(OrganizationStatus.STATUS_CREATED);
+            organization.setOrganizationStatus(OrganizationStatus.STATUS_ACTIVED);//TODO нет процедуры активации организации
             logger.debug("add  organization - " + organization);
             organizationDAO.save(organization);
         }

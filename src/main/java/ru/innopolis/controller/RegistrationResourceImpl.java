@@ -53,6 +53,8 @@ public class RegistrationResourceImpl implements RegistrationResource {
             @RequestBody UserReqForm userReqForm) {
         logger.debug("Registering admin user account with information: ", userReqForm);
 
+//        if (true)
+//            new RuntimeException("RuntimeException");
         return registrationService.registerNewAdminAccount(userReqForm);
     }
 

@@ -26,7 +26,6 @@ import java.security.Principal;
 public interface RegistrationResource {
 
     @PostMapping
-    @RequestMapping(method = RequestMethod.POST)
     @ResponseBody
     @ApiOperation(
         value = "Создание оператора",
@@ -46,7 +45,6 @@ public interface RegistrationResource {
             @RequestBody UserReqForm userReqForm,
             Principal principal);
 
-    @PostMapping
     @RequestMapping(method = RequestMethod.POST, value = "/admin")
     @ResponseBody
     @ApiOperation(

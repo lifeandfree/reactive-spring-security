@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.server.reactive.HttpHandler;
@@ -17,10 +18,12 @@ import org.springframework.web.reactive.config.WebFluxConfigurationSupport;
 import org.springframework.web.server.adapter.WebHttpHandlerBuilder;
 import reactor.ipc.netty.NettyContext;
 import ru.innopolis.server.Server;
+import ru.innopolis.service.sec.SecurityConfig;
 
 @Configuration
 @EnableWebFlux
 @ComponentScan("ru.innopolis")
+//@Import({SecurityConfig.class})
 @PropertySource(value={"classpath:application.properties"})
 public class WebConfig extends WebFluxConfigurationSupport {
 

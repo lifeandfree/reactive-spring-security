@@ -23,8 +23,8 @@ import java.security.Principal;
 @RequestMapping("/api/v1")
 @Api(value = "userinfo")
 public interface UserInfoResource {
-    @GetMapping
-    @RequestMapping(method = RequestMethod.GET, value = "/userinfo")
+    @GetMapping("/userinfo")
+//    @RequestMapping(method = RequestMethod.GET, value = )
     @ResponseBody
     @ApiOperation(
         value = "Получить данные о пользователе",

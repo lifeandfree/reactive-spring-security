@@ -35,7 +35,7 @@ public class ReactiveAuthenticationManagerImpl implements ReactiveAuthentication
     }
 
     @Override
-    public Mono<Authentication> authenticate(Authentication authentication) {
+    public Mono<Authentication> authenticate(Authentication authentication) { //login password
         final String username = authentication.getName();
         return this.userDetailsService.findByUsername(username).
                 publishOn(Schedulers.parallel()).
